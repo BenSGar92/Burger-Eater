@@ -7,7 +7,7 @@
     <div class="column">
       <ul>
         {{#each burgers}}
-          {{#unless sleepy}}
+          {{#unless devoured}}
             {{> burgers/burger-block sleep=true}}
           {{/unless}}
         {{/each}}
@@ -16,7 +16,7 @@
     <div class="column">
       <ul>
         {{#each burgers}}
-          {{#if sleepy}}
+          {{#if devoured}}
             {{> burgers/burger-block sleep=false}}
           {{/if}}
         {{/each}}
