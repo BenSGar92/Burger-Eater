@@ -80,6 +80,17 @@ function printQuestionMarks(num) {
   
         cb(result);
       });
+    },
+    delete: function(table, cols, vals, cb) {
+      var queryString = "DELETE FROM " + table + " WHERE " + cols + " = " + vals;
+      
+      console.log(queryString);
+
+      connection.query(queryString, function(err, res) {
+        if (err) throw err;
+      
+        cb(res)
+      });
     }
   };
 

@@ -58,4 +58,8 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+.delete {
+  display: inline-block;
+}
+
   

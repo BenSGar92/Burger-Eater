@@ -20,6 +20,7 @@ router.get("/", function(req, res) {
     burger.create(["name", "devoured"], [req.body.name, req.body.devoured], function(result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
+      
     });
   });
   
@@ -27,10 +28,9 @@ router.get("/", function(req, res) {
     var condition = "id = " + req.params.id;
   
     console.log("condition", condition);
-  
     burger.update(
       {
-        devoured: req.body.devoured
+        devoured: req.body.devoured//this is a boolean
       },
       condition,
       function(result) {
@@ -44,9 +44,21 @@ router.get("/", function(req, res) {
     );
   });
 
-
-
-
+  router.delete("/api/burgers/:id", function(req, res) {
+    var deletion = req.params.id;
+  
+    console.log("deletion", deletion);
+    burger.delete(
+      "id",
+      deletion,
+      function(result) {
+        if (result.affectedRows === 0) {
+          // If no rows were changed, then the ID must not exist, so 404
+          return res.status(404).end();
+        }
+        res.send(200)
+      })
+  });
 
 // Export routes for server.js to use.
 module.exports = router;

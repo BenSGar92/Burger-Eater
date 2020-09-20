@@ -20,7 +20,21 @@ $(function() {
         }
       );
     });
-  
+    
+    $(".delete").on("click", function(event) {
+      var id = $(this).data("id");
+   
+      // Send the DELETE request.
+      $.ajax("/api/burgers/" + id, {
+        type: "DELETE"
+      }).then(
+        function() {
+        location.reload();
+
+        }
+      );
+    });
+
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
@@ -28,7 +42,7 @@ $(function() {
       var newBurger = {
         name: $("#ca").val().trim()
       };
-  
+
       // Send the POST request.
       $.ajax("/api/burgers", {
         type: "POST",
