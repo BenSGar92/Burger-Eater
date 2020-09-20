@@ -5,6 +5,7 @@
 <div class="content">
   <div class="row">
     <div class="column">
+      <h2>Order Up!</h2>
       <ul>
         {{#each burgers}}
           {{#unless devoured}}
@@ -14,6 +15,7 @@
       </ul>
     </div>
     <div class="column">
+      <h2>Past Orders</h2>
       <ul>
         {{#each burgers}}
           {{#if devoured}}
@@ -23,6 +25,7 @@
       </ul>
     </div>
   </div>
+  <div class="centered">
     <h2>Add a Burger</h2>
     <form class="create-form">
 
@@ -31,7 +34,7 @@
         <input type="text" id="ca" name="name">
       </div>
       <p>Enter a burger that you want to eat and click the "Add Burger" button.</p>
-      <button type="submit">Add Burger</button>
+      <button class="burger-button" type="submit">Add Burger</button>
     </form>
-    
+  </div>  
 </div>
