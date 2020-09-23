@@ -22,5 +22,26 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "mysql": "^2.18.1"
+  },
+  "development": {
+    "username": "ibho74azxsqyxyyd",
+    "password": "l4k6ldry3o8wlepi",
+    "database": "l0nisyeo0ltzkv27",
+    "host": "qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "ibho74azxsqyxyyd",
+    "password": "l4k6ldry3o8wlepi",
+    "database": "l0nisyeo0ltzkv27",
+    "host": "qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "ibho74azxsqyxyyd",
+    "password": "l4k6ldry3o8wlepi",
+    "database": "l0nisyeo0ltzkv27",
+    "host": "qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
   }
 }
